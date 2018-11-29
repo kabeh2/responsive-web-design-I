@@ -333,6 +333,9 @@ a {
   .content-row h1 {
     font-size: 4em;
   }
+  .content-row img {
+    display: none;
+  }
 }
 
 .top-half {
