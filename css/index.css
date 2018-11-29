@@ -197,37 +197,10 @@ h5 {
 }
 
 .nav-links {
-  padding-right: 11.5%;
+  padding-right: 9.9%;
 }
 
 @media (max-width: 1165px) {
-  .nav-brand {
-    width: 100%;
-    display: none;
-  }
-  .nav-links {
-    width: 100%;
-  }
-
-  .nav-links:hover {
-    color: white;
-    background-color: #3c373b;
-    font-weight: bold;
-    transition: background 0.75s;
-  }
-  .navigation-bar a {
-    padding: 0;
-    margin: 0;
-  }
-  .navigation-bar a:hover {
-    color: white;
-  }
-  .navigation-bar {
-    position: relative;
-    height: 100%;
-    margin-bottom: 0;
-  }
-
   header {
     /* position: relative; */
     margin-top: 0;
@@ -325,6 +298,41 @@ a {
   .middle-img {
     height: 200px;
   }
+
+  .nav-brand {
+    width: 100%;
+    display: none;
+    right: 3%;
+  }
+  .nav-links {
+    width: 18%;
+  }
+
+  .nav-links:hover {
+    color: white;
+    background-color: #3c373b;
+    font-weight: bold;
+    transition: background 0.75s;
+  }
+  .navigation-bar a {
+    padding: 0;
+    margin: 0;
+  }
+  .navigation-bar a:hover {
+    color: white;
+  }
+  .navigation-bar {
+    position: relative;
+    height: 100%;
+    margin-bottom: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .content-row h1 {
+    font-size: 4em;
+  }
 }
 
 .top-half {
@@ -361,7 +369,41 @@ a {
   margin-bottom: 50px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
+  .nav-brand {
+    width: 100%;
+    display: none;
+    left: 1%;
+  }
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-links:hover {
+    color: white;
+    background-color: #3c373b;
+    font-weight: bold;
+    transition: background 0.75s;
+  }
+  .navigation-bar a {
+    padding: 0;
+    margin: 0;
+  }
+  .navigation-bar a:hover {
+    color: white;
+  }
+  .navigation-bar {
+    position: relative;
+    height: 100%;
+    margin-bottom: 0;
+    right: 5%;
+  }
+
+  header {
+    /* position: relative; */
+    margin-top: 0;
+  }
+
   button {
     width: 100%;
   }
