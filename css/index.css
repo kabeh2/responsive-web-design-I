@@ -1,3 +1,410 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* body {
+  padding-left: 5%;
+  padding-right: 5%;
+} */
+
+.navigation-bar {
+  width: 100%; /* i'm assuming full width */
+  height: 100px;
+  background-color: white;
+  margin-bottom: 25px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  transition: 0.5s;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.nav-brand {
+  float: right;
+  position: relative;
+  height: 50px;
+  margin-top: 15px; /* if you want it vertically middle of the navbar. */
+  /* margin-right: 120px; */
+}
+
+.navigation-bar > a {
+  display: inline-block;
+  vertical-align: top;
+  height: 80px; /* if you want it to take the full height of the bar */
+  line-height: 80px; /* if you want it vertically middle of the navbar */
+  text-decoration: none;
+  color: #3c373b;
+  text-align: center;
+  font-weight: bold;
+}
+
+.navigation-bar > a:hover {
+  color: #be1e4d;
+  font-weight: bold;
+  /* border-bottom: #be1e4d solid 5px; */
+  transition: color 0.75s;
+}
+
+.nav-links {
+  padding-right: 11.5%;
+}
+
+@media (max-width: 1165px) {
+  .nav-brand {
+    width: 100%;
+    display: none;
+  }
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-links:hover {
+    color: white;
+    background-color: #3c373b;
+    font-weight: bold;
+    transition: background 0.75s;
+  }
+  .navigation-bar a {
+    padding: 0;
+    margin: 0;
+  }
+  .navigation-bar a:hover {
+    color: white;
+  }
+  .navigation-bar {
+    position: relative;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  header {
+    /* position: relative; */
+    margin-top: 0;
+  }
+}
+
+header {
+  position: relative;
+  margin-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.content-row {
+  display: inline-block;
+  width: 100%;
+}
+
+button {
+  display: block;
+  background: white;
+  border-radius: 2px;
+  height: 50px;
+  width: 200px;
+  margin-left: 20.5%;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #3c373b;
+  font-weight: 200;
+  transition: background 0.75s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content-row img {
+  float: right;
+  width: 45%;
+  margin-bottom: 50px;
+}
+
+.content-row h1 {
+  display: inline-block;
+  font-size: 5em;
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+
+@media (max-width: 1000px) {
+  .content-row {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  button {
+    display: block;
+    background: white;
+    border-radius: 2px;
+    height: 50px;
+    width: 75%;
+    font-size: 1.15em;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .content-row img {
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    float: none;
+    display: block;
+  }
+
+  .content-row h1 {
+    display: inline-block;
+    font-size: 5em;
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+
+  .middle-img {
+    height: 200px;
+  }
+}
+
+.top-half {
+  margin-top: 50px;
+  white-space: nowrap;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.top-row {
+  display: inline-block;
+  width: 50%;
+  white-space: normal;
+  vertical-align: top;
+  margin-bottom: 50px;
+}
+
+.middle-img {
+  width: 100%;
+}
+
+.bottom-half {
+  margin-top: 50px;
+  white-space: nowrap;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.bottom-row {
+  display: inline-block;
+  width: 33.333%;
+  white-space: normal;
+  vertical-align: top;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 700px) {
+  button {
+    width: 100%;
+  }
+
+  .top-row {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .middle-img {
+    width: 100%;
+  }
+
+  .bottom-row {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+.contact {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.contact a {
+  color: #be1e4d;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  color: #3c373b;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+hr {
+  margin-left: 50px;
+  margin-right: 50px;
+}
